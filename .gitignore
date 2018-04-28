@@ -1,0 +1,22 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Coverage directory used by tools like istanbul
+__coverage__
+
+# Dependency directories
+node_modules/
+
+# Typescript
+dist/
+
+# Optional npm cache directory
+.npm
+
+# dotenv environment variables file
+.env
+
+# Editors
+.idea
