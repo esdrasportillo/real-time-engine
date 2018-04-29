@@ -2,7 +2,7 @@ import { getStore } from './store';
 
 export const ON_PAYLOAD = 'ON_PAYLOAD';
 
-const handlePayload = domain => payload =>
+const registerPayloadHandler = domain => payload =>
   getStore().dispatch({
     type: ON_PAYLOAD,
     domain,
@@ -10,4 +10,4 @@ const handlePayload = domain => payload =>
   });
 
 
-export default handlePayload;
+export default registerPayloadHandler;

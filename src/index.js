@@ -1,7 +1,7 @@
-import handlePayload from './state/state.actions';
+import registerPayloadHandler from './state/state.actions';
 import { withRealTime } from './providers/with-real-time';
 
 export {
-  handlePayload,
+  registerPayloadHandler,
   withRealTime,
 };

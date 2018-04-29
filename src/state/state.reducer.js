@@ -6,7 +6,6 @@ export const stateReducer = (state = {}, action) => {
       return {
         ...state,
         [action.domain]: {
-          ...state[action.domain],
           ...action.payload,
         },
       };
