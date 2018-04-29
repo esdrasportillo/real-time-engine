@@ -1,7 +1,8 @@
 {
   "name": "real-time-engine",
   "version": "1.0.4",
-  "description": "",
+  "private": false,
+  "description": "State manager focused on handling real-time features for React applications",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -12,10 +13,15 @@
   ],
   "scripts": {
     "build": "nwb build-react-component",
+    "publish-pkg": "npm run build && npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esdrasportillo/real-time-engine.git"
+  },
+  "author": "Esdras Portillo",
+  "license": "MIT",
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
