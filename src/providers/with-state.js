@@ -3,10 +3,18 @@ import { Provider } from 'react-redux';
 
 import { getStore } from '../state/store';
 
-const withState = Component => (
-  <Provider store={getStore()}>
-    <Component />
-  </Provider>
-);
+function withState(Component) {
+  return class extends React.Component {
+    render() {
+      // Wraps the input component in a container, without mutating it. Good!
+      return (
+        <Provider store={getStore()}>
+          <Component {...this.props} />
+        </Provider>
+      );
+    }
+  };
+}
+
 
 export default withState;

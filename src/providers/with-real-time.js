@@ -1,7 +1,7 @@
 import { compose } from 'recompose';
 import { connect } from 'react-redux';
 
-import { withState } from './with-state';
+import withState from './with-state';
 
 const mapStateToProps = state => ({
   ...state,
