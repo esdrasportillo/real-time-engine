@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 
 import withState from './with-state';
 
-const mapStateToProps = state => ({
-  ...state,
+const makeMapStateToProps = domain => state => ({
+  ...state[domain],
 });
 
-export const withRealTime = (Component) => {
+export const withRealTime = domain => (Component) => {
   const enhance = compose(
     withState,
-    connect(mapStateToProps),
+    connect(makeMapStateToProps(domain)),
   );
 
   return enhance(Component);
